@@ -43,7 +43,7 @@ Please see the `installation section <https://codeigniter.com/userguide3/install
 of the CodeIgniter User Guide.
 
 *******
-License
+License abc
 *******
 
 Please see the `license
