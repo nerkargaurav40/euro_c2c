@@ -10,6 +10,15 @@ class Common_model extends CI_Model {
 
 	}
 
+	public function getRecordCount($categoryID)
+	{
+		$this->db->select('COUNT(custID) AS recordCnt');
+        $this->db->from('tbl_customer_answers');
+        $this->db->where('questionCategory',$categoryID);
+        $this->db->group_by('custID,questionCategory'); 
+        return $result = $this->db->get()->result_array(); 
+	}
+
     public function db_update($tablename, $fieldarray, $columnname, $value) {
 
 		$this->db->where($columnname, $value);

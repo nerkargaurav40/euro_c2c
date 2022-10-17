@@ -42,50 +42,51 @@ $(function(){
             },
             'empCode':{
                 required: true,
-                alphanumeric: true
+                
             },
-            'empVertical':{
+
+            /*'empVertical':{
                 required:true,
             },
             'empDesignation':{
                 required: true,
                 alpha: true
-            },
+            },*/
             'empPhone':{
-                required:true,
+                
                 number: true,
                 minlength: 10,
                 maxlength:10
             },
-            'captcha':{
+            /*'captcha':{
                 required:true,
-            },
+            },*/
         },
         messages:{
             'empName': {
                 required:'Please enter name',
-                alpha:'Please enter only aplhabets.'
+                alpha:'Please enter only alphabets.'
             },
             'empCode': {
                 required:'Please enter code.',
-                alphanumeric:'Please enter only alpha numeric characters.',
+                
             },
-            'empVertical':{
+            /*'empVertical':{
                 required:'Please select vertical.',
-            },
-            'empDesignation':{
+            },*/
+            /*'empDesignation':{
                 required:'Please enter designation',
                 alpha:'Please enter only alphabets.'
-            },
+            },*/
             'empPhone':{
-                required:'Please enter mobile number.',
+                
                 number:'Please enter only numbers.',
                 minlength:'Please enter at least 10 numbers.',
                 maxlength:'Please enter no more than 10 numbers.'
             },
-            'captcha':{
+            /*'captcha':{
                 required:'Please enter captcha',
-            }
+            }*/
 
         },
         submitHandler: function(form) {
@@ -102,9 +103,6 @@ $(function(){
                         $('.alert').fadeIn('slow');
                     }else if(response.status=='success'){
                         window.location.href=b_url+'customer-details';
-                    }else if(response.status=='limiterror')
-                    {
-                        window.location.href=b_url+'limitexceeds';
                     }
                 }
             })
@@ -118,15 +116,21 @@ $(function(){
                 alpha: true
             },
             'custEmail':{
-                required: true,
+                
                 email: true
             },
-
+            'custPincode':{
+                required:true,
+                number:true,
+                minlength:6,
+                maxlength:6
+            },
+            /*
             'custLocation':{
                 required: true,
                 alpha: true
             },
-            'custAge':{
+            'custPincode':{
                 required:true,
                 number:true,
                 minlength:1,
@@ -141,7 +145,7 @@ $(function(){
             },
             'custEFL':{
                 required:true
-            },
+            },*/
             'custMobile':{
                 required:true,
                 number: true,
@@ -152,9 +156,19 @@ $(function(){
         messages:{
             'custName': {
                 required:'Please enter name',
-                alpha:'Please enter only aplhabets.'
+                alpha:'Please enter only alphabets.'
+            },
+            'custPincode':{
+                required:'Please enter pincode',
+                number:'Please enter only numbers.',
+                minlength:'Please enter at least 6 numbers.',
+                maxlength:'Please enter no more than 6 numbers.'
             },
             'custEmail':{
+                
+                email:'Please enter valid email address.'
+            },
+            /*'custEmail':{
                 required:'Please enter email address.',
                 email:'Please enter valid emial address.'
             },
@@ -177,7 +191,7 @@ $(function(){
             },
             'custEFL':{
                 required:'Please select EFL option.'
-            },
+            },*/
             'custMobile':{
                 required:'Please enter mobile number.',
                 number:'Please enter only numbers.',
@@ -199,7 +213,10 @@ $(function(){
                         $('.error_message').html('').html(response.error);
                         $('.alert').fadeIn('slow');
                     }else if(response.status=='success'){
-                        window.location.href=b_url+'quiz';
+                        window.location.href=b_url+'questionnaire';
+                    }else if(response.status=='limiterror')
+                    {
+                        window.location.href=b_url+'limitexceeds';
                     }
                 }
             })
@@ -222,9 +239,9 @@ $(function(){
 
         },
         submitHandler: function(form) {
-            form.submit();
-            /*$.ajax({
-                url:b_url+'home/searchPartnersByID',
+            //form.submit();
+            $.ajax({
+                url:b_url+'home/searchpartner',
                 method:'POST',
                 dataType:'json',
                 data:$(form).serialize(),
@@ -232,14 +249,40 @@ $(function(){
                     
                     if(response.status=='error')
                     {
-                        $('.error_message').html('').html(response.error);
-                        $('.alert').fadeIn('slow');
+                        $('p.error_message').html('').html('emp code does not exist into database.');
+                        
                     }else if(response.status=='success'){
-                        window.location.href=b_url+'quiz';
+                        window.location.href=b_url+'home/searchPartnersByID';
                     }
                 }
-            })*/
+            });
 		}
     });
 
-})
+    $('.custPincode').on('change',function(){
+        $.ajax({
+            url:b_url+'home/getStateCityByPincode',
+            method:'POST',
+            dataType:'json',
+            data:{'pincode':$(this).val()},
+            success:function(response){
+                
+                if(response.status=='error')
+                {
+                    $('.error_message').html('').html('state and city not found. wrong pincode');
+                    
+                }else if(response.status=='success'){
+                    $('.error_message').html('');
+                    
+                    $('#custState').val(response.content.state_name);
+                    $('#custCity').val(response.content.city_name);
+                }
+            }
+        });
+    });
+
+    $('.btnRedirect').on('click',function(){
+        window.location.href=b_url+$(this).attr('data-id');
+    });
+
+  });

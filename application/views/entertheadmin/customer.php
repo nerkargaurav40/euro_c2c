@@ -1,6 +1,6 @@
 <input type="hidden" id="basepath" value="<?php echo base_url(); ?>">
 <h2 class="">Customer Details</h2>
-<?php echo form_open(ADMIN_FOLDER_NAME . '/employees', array('id' => 'frm_customerindex', 'class' => '', 'role' => 'form')) ?>
+<?php echo form_open(ADMIN_FOLDER_NAME . '/customers', array('id' => 'frm_customerindex', 'class' => '', 'role' => 'form')) ?>
 <div class="flex_spbt align_fe">
     <div class="date_filterbox">
         <div class="col_6 extra-padding-top-20">
@@ -39,18 +39,17 @@
                 <tr>
                     <th>Sr. No.</th>
                     
-                        <th>Customer Name</th>
-                        <th>Customer Email</th>
-                        <th>Customer Location</th>
-                        <th>Customer Age</th>
-                        <th>Customer Phone Number</th>
-                        <th>Customer Sex</th>
-                        <th>Customer No Of Memeber In Family</th>
-                        <th>Customer EFL</th>
-                        
-                    
-
-                    
+                    <th>Customer Name</th>
+                    <th>Customer Email</th>
+                    <th>Customer Phone Number</th>
+                    <th>Customer Pincode</th>
+                    <th>Customer State</th>
+                    <th>Customer City</th>
+                    <th>Customer Code</th>
+                    <th>Customer Gender</th>
+                    <th>Customer No Of Memeber In Family</th>
+                    <th>Customer EFL</th>
+                    <th>Customer Visit Type</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,11 +63,14 @@
                             <td><?php echo $row->custName; ?></td>
                             <td><?php echo $row->custEmail; ?></td>
                             <td><?php echo $row->custPhoneNumber; ?></td>
-                            <td><?php echo $row->custLocation; ?></td>
-                            <td><?php echo $row->custAge; ?></td>
+                            <td><?php echo $row->custPincode; ?></td>
+                            <td><?php echo $row->custState; ?></td>
+                            <td><?php echo $row->custCity; ?></td>
+                            <td><?php echo $row->custCode; ?></td>
                             <td><?php echo $row->custSex; ?></td>
                             <td><?php echo $row->custNoOfMemeberInFamily; ?></td>
                             <td><?php echo $row->custEFL; ?></td>
+                            <td><?php echo $row->custVisitType; ?></td>
                             
         
                             

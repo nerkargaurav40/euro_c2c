@@ -2,12 +2,14 @@
 <link rel="icon" type="image/x-icon" href="favicon.png">
 <link rel="stylesheet" href="css/animate.min.css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/slick.css" />
 <link rel="stylesheet" href="css/style.css" />
 
 <!-- JS -->
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script> 
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
+<script src="js/slick.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
 
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<g id="guide" display="none">
+	<g id="Layer_8" display="inline">
+		<g id="guides">
+			<rect fill="#CEE4EA" width="48" height="48"/>
+			<rect x="2" y="2" fill="#E9F2F4" width="44" height="44"/>
+			<rect x="4" y="4" fill="#FFFFFF" width="40" height="40"/>
+		</g>
+	</g>
+</g>
+<g id="User">
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#034EA2" d="M24,4c11.046,0,20,8.954,20,20s-8.954,20-20,20S4,35.046,4,24
+			S12.954,4,24,4z"/>
+		<path fill="#FFFFFF" d="M27.013,23.274c1.279-0.933,2.112-2.444,2.112-4.146C29.125,16.301,26.826,14,24,14
+			s-5.125,2.301-5.125,5.128c0,1.701,0.833,3.212,2.112,4.146c-3.18,1.217-5.444,4.302-5.444,7.906c0,1.555,1.265,2.821,2.819,2.821
+			h11.275c1.554,0,2.819-1.266,2.819-2.821C32.457,27.575,30.193,24.491,27.013,23.274z M20.413,19.129
+			c0-1.979,1.609-3.59,3.587-3.59s3.587,1.61,3.587,3.59s-1.609,3.59-3.587,3.59S20.413,21.108,20.413,19.129z M29.638,32.461
+			H18.362c-0.706,0-1.281-0.575-1.281-1.282c0-3.817,3.104-6.923,6.919-6.923s6.919,3.105,6.919,6.923
+			C30.919,31.886,30.345,32.461,29.638,32.461z"/>
+	</g>
+</g>
+</svg>

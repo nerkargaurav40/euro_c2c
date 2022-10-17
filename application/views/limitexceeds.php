@@ -16,7 +16,7 @@
               				
               				
               				<p>Your Limit is exceeds.</p>		
-              				<button class="btn_blue_color btnRedirect">Go to home page</button>
+              				<button class="btn_blue_color btnRedirectHomeLogout">Go to home page</button>
             			</div>
           			</div>
          		</div>
@@ -27,7 +27,7 @@
 <script>
    
 
-	$('.btnRedirect').on('click',function(){
-		window.location.href=b_url+'home/logout';
+	$('.btnRedirectHomeLogout').on('click',function(){
+		window.location.href=b_url+'home/logout1';
 	})
 </script>

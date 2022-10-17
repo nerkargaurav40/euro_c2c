@@ -9,12 +9,12 @@
             </div>
             <div class="row mt-3">
                 <div class="col-sm-6 mt-3">
-                <label class="form_label">Employee Name</label>
-                <input type="text" class="form-control" name="empName" id="empName" placeholder="Enter your employee name">
+                <label class="form_label">Employee Name <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" name="empName" id="empName" placeholder="Enter your name">
                 </div><!-- col -->
 
                 <div class="col-sm-6 mt-3">
-                <label class="form_label">Employee Code</label>
+                <label class="form_label">Employee Code <span style="color:red;">*</span></label>
                 <input type="text" class="form-control" name="empCode" id="empCode" placeholder="Enter your employee code">
                 </div><!-- col -->
 
@@ -22,22 +22,33 @@
                 <label class="form_label">Vertical</label>
                 <select class="form-control form-select" name="empVertical" id="empVertical">
                     <option value="">Please Select</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
+                    <option value="Direct Sales">Direct Sales</option>
+                    <option value="Forbes Pro">Forbes Pro</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="E-Commerce">E-Commerce</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="R&D">R&D</option>
+                    <option value="Service and CRM">Service and CRM</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Supply Chain and logistics">Supply Chain and logistics</option>
+                    <option value="IT">IT</option>
+                    
                 </select>
                 </div><!-- col -->
 
-                <div class="col-sm-6 mt-3">
+                <!-- <div class="col-sm-6 mt-3">
                 <label class="form_label">Designation</label>
                 <input type="text" class="form-control" name="empDesignation" id="empDesignation" placeholder="Enter your designation">
-                </div><!-- col -->
+                </div> --><!-- col -->
 
                 <div class="col-sm-6 mt-3">
                 <label class="form_label">Phone Number</label>
                 <input type="text" class="form-control" name="empPhone" id="empPhone" minlength="10" maxlength="10" placeholder="Enter your phone number">
                 </div><!-- col -->
-                <div class="col-sm-6 mt-3">
+                <!-- <div class="col-sm-6 mt-3">
                 <label class="form_label">Captcha Code</label>
                   <div class="input-group">
                     <span class="input-group-text" id="basic-addon1"><?php echo $captcha['number']; ?></span>
@@ -45,7 +56,7 @@
                     <input type="hidden" name="cpatchaVal" id="cpatchaVal" value="<?php echo $captcha['val']; ?>" />
                   </div>
                   
-                </div>
+                </div> -->
                 
 
             </div><!-- row -->
